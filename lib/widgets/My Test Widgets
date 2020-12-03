@@ -1,0 +1,99 @@
+RaisedButton(
+color: Colors.greenAccent,
+onPressed: () async {
+// show input autocomplete with selected mode
+// then get the Prediction selected
+Prediction p = await PlacesAutocomplete.show(
+language: 'en',
+context: context, apiKey: GoogleApiKey);
+displayPrediction(p);
+},
+
+child: Text('Find address'),
+
+),
+
+
+
+
+/////////////////////////////////////////////////////////////////
+
+ TextFormField(
+                         onChanged: (text){
+                           print("on changed called");
+                           var filtered_list =List();
+                           var index_point= List();
+                           String trimmed = text.trimLeft();
+                           int len = trimmed.length;
+                           print("loop is about to starts");
+
+                           if(trimmed!= '')  {
+                             print("text is not null");
+                             for(int i=0 ; i<city_names.length;i++){
+                               if(i==0)
+                                 print("loop's 1st iteration");
+                               if(city_names[i].toString().startsWith(trimmed))
+                               {
+                                 print("if executes");
+                                 // print(city_names[i]);
+                                 filtered_list.add(city_names[i]);
+                               }
+
+
+                             }}
+                           print("after loop");
+                           if(filtered_list.length!=null){
+                             setState(() {
+                               my_filtered_list = filtered_list;
+                             });
+                           }
+                           print(filtered_list);
+                         },
+                         controller: source_city,
+                         decoration: InputDecoration(
+                             enabledBorder: OutlineInputBorder(
+                               borderSide:
+                               BorderSide(color: Color(0xFF50C788), width: 3),
+                               borderRadius: BorderRadius.all(
+                                 Radius.circular(40.0),
+                               ),
+                             ),
+                             focusColor: Color(0xFF50C788),
+                             focusedBorder: OutlineInputBorder(
+                               borderSide:
+                               BorderSide(color: Colors.greenAccent, width: 3),
+                               borderRadius: BorderRadius.all(
+                                 Radius.circular(40.0),
+                               ),
+                             ),
+                             filled: true,
+                             fillColor: Color.fromRGBO(150, 150, 150, 100.0),
+                             prefixIcon: Icon(
+                               Icons.not_listed_location,
+                               color: Colors.black,
+                             ),
+                             hintText: "Choose departure city",
+                             hintStyle: TextStyle(fontSize: 20.0)),
+                         style:
+                         TextStyle(fontWeight: FontWeight.w400, fontSize: 22),
+                       ),
+
+
+
+
+            ///////////////////////////////////////////////////////////////////////
+
+            import 'package:palette_generator/palette_generator.dart';
+
+            // Calculate dominant color from ImageProvider
+            Future<Color> getImagePalette (ImageProvider imageProvider) async {
+              final PaletteGenerator paletteGenerator = await PaletteGenerator
+                  .fromImageProvider(imageProvider);
+              return paletteGenerator.dominantColor.color;
+            }
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "754969872923",
+    "firebase_url": "https://adventureeye-49bc2.firebaseio.com",
+    "project_id": "adventureeye-49bc2",
+    "storage_bucket": "adventureeye-49bc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754969872923:android:5e9f07e042ff0951a206be",
+        "android_client_info": {
+          "package_name": "com.adventureeye.adventure_eye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754969872923-n88vf5n4hneulncd71qikjjecqe8jdhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKoyHyGxxFi5db_UXYq2Q2cP1ITNeklGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754969872923-n88vf5n4hneulncd71qikjjecqe8jdhf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
